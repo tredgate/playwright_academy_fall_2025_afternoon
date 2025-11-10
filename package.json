@@ -1,0 +1,22 @@
+{
+  "name": "playwright_academy_fall_2025_afternoon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fifkapetr/playwright_academy_fall_2025_afternoon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fifkapetr/playwright_academy_fall_2025_afternoon/issues"
+  },
+  "homepage": "https://github.com/fifkapetr/playwright_academy_fall_2025_afternoon#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.0"
+  }
+}
