@@ -1,15 +1,39 @@
 {
   "name": "playwright_academy_fall_2025_afternoon",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
+  "description": "E-Shop Page Object Model for Playwright Testing",
+  "main": "src/pages/index.ts",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:ui": "npx playwright test --ui",
+    "test:examples": "npx playwright test tests/examples",
+    "lint": "eslint src/**/*.ts tests/**/*.ts --fix",
+    "lint:check": "eslint src/**/*.ts tests/**/*.ts",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write src/**/*.ts tests/**/*.ts",
+    "format:check": "prettier --check src/**/*.ts tests/**/*.ts",
+    "test:report": "npx playwright show-report",
+    "install-browsers": "npx playwright install",
+    "clean": "rm -rf test-results playwright-report",
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fifkapetr/playwright_academy_fall_2025_afternoon.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "playwright",
+    "testing",
+    "page-object-model",
+    "e2e",
+    "automation",
+    "e-shop",
+    "typescript"
+  ],
+  "author": "Petr Fifka",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fifkapetr/playwright_academy_fall_2025_afternoon/issues"
@@ -17,6 +41,14 @@
   "homepage": "https://github.com/fifkapetr/playwright_academy_fall_2025_afternoon#readme",
   "devDependencies": {
     "@playwright/test": "^1.56.1",
-    "@types/node": "^24.10.0"
-  }
+    "@types/node": "^24.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-playwright": "^0.20.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {}
 }
