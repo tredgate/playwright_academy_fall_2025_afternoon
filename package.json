@@ -16,7 +16,14 @@
   },
   "homepage": "https://github.com/fifkapetr/playwright_academy_fall_2025_afternoon#readme",
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@faker-js/faker": "^10.1.0",
     "@playwright/test": "^1.56.1",
-    "@types/node": "^24.10.0"
+    "@types/node": "^24.10.0",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-playwright": "^2.3.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.4"
   }
 }
