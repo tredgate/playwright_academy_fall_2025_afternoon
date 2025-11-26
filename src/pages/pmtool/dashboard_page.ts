@@ -8,6 +8,7 @@ export class DashboardPage {
   readonly logoutButton: Locator;
   readonly bellButton: Locator;
   readonly projectsButton: Locator;
+  readonly appNameHeader: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -15,6 +16,7 @@ export class DashboardPage {
     this.logoutButton = page.locator("#logout");
     this.bellButton = page.locator("#user_notifications_report");
     this.projectsButton = page.locator("#Projects");
+    this.appNameHeader = page.locator(".navbar-brand");
   }
 
   async clickProfile() {
@@ -31,5 +33,15 @@ export class DashboardPage {
   async clickProjects() {
     await this.projectsButton.click();
     return new ProjectsPage(this.page);
+  }
+
+  async dashboardAsserts(appName: string) {
+    await expect
+      .soft(this.appNameHeader, "Application Name Header has Text")
+      .toHaveText(appName);
+    await expect
+      .soft(this.profileButton, "Profile Button is Visible")
+      .toBeVisible();
+    return this;
   }
 }
