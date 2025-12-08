@@ -84,7 +84,20 @@ export class CreateNewProjectModal {
     return this;
   }
 
+  async selectPriorityByLabel(priorityLabel: string) {
+    await this.prioritySelect.selectOption({ label: priorityLabel });
+    return this;
+  }
+
+  async selectStatusByLabel(statusLabel: string) {
+    await this.statusSelect.selectOption({ label: statusLabel });
+    return this;
+  }
+
   async fillStartDate(startDate: string) {
+    // ? Pro vyplnění tohoto pole potřebujeme použít speciální sekvenci kroků, jinak by se nám datum správně nepropsalo (zobrazuje se okno kalendáře, které vždy má prioritu, pomocí Escape ho zavřeme)
+    await this.startDateInput.click();
+    await this.startDateInput.press("Escape");
     await this.startDateInput.fill(startDate);
     return this;
   }
