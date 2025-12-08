@@ -146,3 +146,6 @@ vite.config.ts.timestamp-*
 /playwright/.auth/
 
 .DS_Store
+
+.env
+*.env
