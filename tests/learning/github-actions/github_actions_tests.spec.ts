@@ -18,7 +18,7 @@ test.describe(
 
     test("Pmtool Login and Logout", async ({ page }) => {
       const loginPage = new LoginPage(page);
-      loginPage
+      await loginPage
         .open()
         .then((login) => login.login(username, password))
         .then((dashboard) => dashboard.clickProfile())
