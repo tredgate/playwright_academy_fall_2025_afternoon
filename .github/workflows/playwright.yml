@@ -20,8 +20,8 @@ jobs:
         run: npm ci
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-      - name: Run Playwright tests
-        run: npx playwright test --grep @github-actions
+      - name: Run Playwright tests (EN)
+        run: npx cross-env TEST_LANGUAGE=en npx playwright test --grep @github-actions
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
